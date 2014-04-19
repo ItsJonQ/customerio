@@ -1,0 +1,31 @@
+{
+  "name": "lil-b",
+  "description": "A Bootstrap Reset for Bootstrap",
+  "homepage": "https://github.com/ItsJonQ/bootstrap-lil-b",
+  "main": "bootstrap-lil-b.js",
+  "keywords": [
+    "css",
+    "reset",
+    "bootstrap",
+    "lil b",
+    "responsive",
+    "front-end",
+    "fix",
+    "web"
+  ],
+  "ignore": [
+    ".*",
+    "test",
+    "images"
+  ],
+  "_release": "5a47a948a3",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "5a47a948a3650d59ff52206fa3045c64865ca976"
+  },
+  "_source": "git://github.com/ItsJonQ/bootstrap-lil-b.git",
+  "_target": "*",
+  "_originalSource": "lil-b",
+  "_direct": true
+}

@@ -1,0 +1,17 @@
+{
+  "name": "customer-io-page",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Q",
+  "license": "BSD-2-Clause",
+  "devDependencies": {
+    "gulp": "~3.6.1",
+    "gulp-sass": "~0.7.1",
+    "gulp-watch": "~0.6.2",
+    "gulp-plumber": "~0.6.1"
+  }
+}
