@@ -5,11 +5,17 @@ var sass = require('gulp-sass');
 var watch = require('gulp-watch');
 
 // Default Gulp Task
-gulp.task('default', function() {
-    // Styles
-    gulp.src('./build/css/main.scss')
-        .pipe(watch())
+gulp.task('default', ['sass', 'watch']);
+
+
+gulp.task('sass', function() {
+    gulp.src('./build/css/**/*.scss')
         .pipe(plumber())
         .pipe(sass())
         .pipe(gulp.dest('./public/css'));
+});
+
+
+gulp.task('watch', function() {
+    gulp.watch('./build/css/**/*.scss', ['sass']);
 });

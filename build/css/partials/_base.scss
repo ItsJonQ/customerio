@@ -1,0 +1,9 @@
+/**
+ * Base
+ * @partials
+ */
+
+html, body {
+    font-family: $font-family-sans-serif;
+    @include font-smoothing;
+}
