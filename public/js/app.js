@@ -14,7 +14,7 @@ window.App = {
     templatePreview: templatePreview,
     tinymce: tinymce
 };
-}).call(this,require("/Users/Jon/Work/customer.io/Sites/page/node_modules/gulp-browserify/node_modules/browserify/node_modules/insert-module-globals/node_modules/process/browser.js"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_9ba4f160.js","/")
+}).call(this,require("/Users/Jon/Work/customer.io/Sites/page/node_modules/gulp-browserify/node_modules/browserify/node_modules/insert-module-globals/node_modules/process/browser.js"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_ec296ff0.js","/")
 },{"./modules/module.editorModules":2,"./modules/module.templatePreview":3,"./modules/module.tinymce":4,"/Users/Jon/Work/customer.io/Sites/page/node_modules/gulp-browserify/node_modules/browserify/node_modules/insert-module-globals/node_modules/process/browser.js":8,"buffer":5}],2:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 /**
@@ -24,7 +24,6 @@ window.App = {
 
 // Exporting the module
 module.exports = (function ($, undefined) {
-
 
     var initStatus = false;
     var $moduleList;
@@ -44,8 +43,19 @@ module.exports = (function ($, undefined) {
 
     // insert
     var insertModule = function(module) {
+        // Return false if the module is invalid
+        if(!module || typeof module !== 'string') {
+            return false;
+        }
+        // Defining the code of the module from editorModules data
         var code = editorModule[module].code;
-        tinyMCE.activeEditor.execCommand('mceInsertContent', false, code);
+
+        // Defining the editor
+        var editor = tinyMCE.editors[1];
+        editor.execCommand('mceInsertContent', false, code);
+
+        // return the editor
+        return editor;
     };
 
     // Render
@@ -54,16 +64,20 @@ module.exports = (function ($, undefined) {
             return false;
         }
 
+        // Binding the click event of buttons to the $moduleList
         $moduleList.on('click', 'button', function(e) {
+            // Inserting the module
             insertModule($(this).attr('data-module-name'));
         });
     };
 
-
+    // Rendering the editor's content
     var renderEditor = function() {
-        console.log(tinyMCE.activeEditor);
-        if(tinyMCE.activeEditor) {
-            tinyMCE.activeEditor.setContent('<P>Try typing some stuff out in this editor! You\'ll be able to see it live on the right.</P><br>-----<br>Sincerely,<br>Jon Q');
+        // Defining the editor
+        var editor = tinyMCE.editors[1];
+        if(editor) {
+            // Setting the content
+            editor.setContent('<P>Try typing some stuff out in this editor! You\'ll be able to see it live on the right.</P><br>-----<br>Sincerely,<br>Jon Q');
         }
     };
 
@@ -79,6 +93,7 @@ module.exports = (function ($, undefined) {
         // Defining $moduleList
         $moduleList = $('#modules-container');
 
+        // Rendering the modules
         render();
         renderEditor();
 

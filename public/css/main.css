@@ -78,8 +78,9 @@ img {
   display: block;
   margin: 0 auto; }
 
-.page-container {
-  margin-bottom: 80px; }
+
+.section {
+  margin-bottom: 30px; }
 
 /**
  * Buttons
