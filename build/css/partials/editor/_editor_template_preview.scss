@@ -4,6 +4,7 @@
  */
 
 #template-preview-area {
+    margin-bottom: $gutter;
 
     &.fancy {
         .live-preview-area {
@@ -96,6 +97,7 @@
 // Template List
 .email-template-list {
     @include disable-selection;
+    @include list-unstyled;
 
     li {
         cursor: pointer;
@@ -109,6 +111,11 @@
 
         &.header {
             font-weight: bold;
+
+            h4 {
+                margin: 0;
+                font-weight: bold;
+            }
 
             &:hover {
                 background: none;

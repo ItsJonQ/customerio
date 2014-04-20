@@ -171,55 +171,57 @@ img {
  * Template Preview
  * @partial
  */
-#template-preview-area.fancy .live-preview-area {
-  font-size: 18px;
-  line-height: 1.4em;
-  font-family: 'Arial'; }
-  #template-preview-area.fancy .live-preview-area .heading {
-    border-bottom: 5px solid #DF8600;
-    font-family: 'Lobster';
-    background-color: #ff9900;
-    color: #fff;
-    text-shadow: 0px 2px 0px rgba(0, 0, 0, 0.2); }
-#template-preview-area.classy .live-preview-area {
-  font-family: 'Georgia'; }
-  #template-preview-area.classy .live-preview-area .heading {
-    background: none;
-    margin: 0 0 15px;
-    border-bottom: 1px solid #ddd; }
-#template-preview-area.robots {
-  background: url('../../images/texture-robots.jpg');
-  padding: 30px; }
-  #template-preview-area.robots .live-preview-area {
-    background: #fff;
-    background-color: rgba(255, 255, 255, 0.85);
-    border: 1px solid #fff; }
-    #template-preview-area.robots .live-preview-area .heading {
+#template-preview-area {
+  margin-bottom: 30px; }
+  #template-preview-area.fancy .live-preview-area {
+    font-size: 18px;
+    line-height: 1.4em;
+    font-family: 'Arial'; }
+    #template-preview-area.fancy .live-preview-area .heading {
+      border-bottom: 5px solid #DF8600;
+      font-family: 'Lobster';
+      background-color: #ff9900;
+      color: #fff;
+      text-shadow: 0px 2px 0px rgba(0, 0, 0, 0.2); }
+  #template-preview-area.classy .live-preview-area {
+    font-family: 'Georgia'; }
+    #template-preview-area.classy .live-preview-area .heading {
       background: none;
       margin: 0 0 15px;
       border-bottom: 1px solid #ddd; }
-#template-preview-area.bold .live-preview-area {
-  background: #fafafa;
-  font-size: 18px;
-  line-height: 1.5em;
-  padding: 20px 60px; }
-  #template-preview-area.bold .live-preview-area .heading {
-    background: none;
-    color: #000;
-    font-size: 2.4em;
-    text-transform: uppercase; }
-#template-preview-area.blasphemy .live-preview-area {
-  background: blue;
-  color: #fff;
-  font-family: 'comic sans ms'; }
-  #template-preview-area.blasphemy .live-preview-area .heading {
-    background: none;
-    color: green;
-    background-color: yellow; }
-    #template-preview-area.blasphemy .live-preview-area .heading strong {
-      color: red; }
-#template-preview-area.blasphemy a {
-  color: orange; }
+  #template-preview-area.robots {
+    background: url('../../images/texture-robots.jpg');
+    padding: 30px; }
+    #template-preview-area.robots .live-preview-area {
+      background: #fff;
+      background-color: rgba(255, 255, 255, 0.85);
+      border: 1px solid #fff; }
+      #template-preview-area.robots .live-preview-area .heading {
+        background: none;
+        margin: 0 0 15px;
+        border-bottom: 1px solid #ddd; }
+  #template-preview-area.bold .live-preview-area {
+    background: #fafafa;
+    font-size: 18px;
+    line-height: 1.5em;
+    padding: 20px 60px; }
+    #template-preview-area.bold .live-preview-area .heading {
+      background: none;
+      color: #000;
+      font-size: 2.4em;
+      text-transform: uppercase; }
+  #template-preview-area.blasphemy .live-preview-area {
+    background: blue;
+    color: #fff;
+    font-family: 'comic sans ms'; }
+    #template-preview-area.blasphemy .live-preview-area .heading {
+      background: none;
+      color: green;
+      background-color: yellow; }
+      #template-preview-area.blasphemy .live-preview-area .heading strong {
+        color: red; }
+  #template-preview-area.blasphemy a {
+    color: orange; }
 
 .email-template-list {
   -webkit-touch-callout: none;
@@ -227,7 +229,10 @@ img {
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
-  user-select: none; }
+  user-select: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
   .email-template-list li {
     cursor: pointer;
     border-bottom: 1px solid #eee;
@@ -237,5 +242,8 @@ img {
       background: #F5FAFC; }
     .email-template-list li.header {
       font-weight: bold; }
+      .email-template-list li.header h4 {
+        margin: 0;
+        font-weight: bold; }
       .email-template-list li.header:hover {
         background: none; }
