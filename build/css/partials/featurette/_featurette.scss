@@ -13,6 +13,22 @@
     &.branded {
         background-color: $brand-color-main;
         color: $font-color-white;
+        padding: $gutter;
+
+        h1 {
+            font-size: $font-size-large;
+        }
+
+        .headline {
+            p {
+                color: $font-color-white;
+            }
+        }
+
+        a {
+            color: $font-color-white;
+            text-decoration: underline;
+        }
     }
 
     &.bottomless {
@@ -44,6 +60,11 @@
             font-size: $font-size-large;
         }
 
+        p {
+            color: #666;
+            font-size: 1.4em;
+            line-height: 1.5em;
+        }
 
         small {
             font-size: 0.65em;
@@ -51,7 +72,7 @@
         }
     }
 
-    p {
+    .standout {
         color: #666;
         font-size: 1.4em;
         line-height: 1.5em;

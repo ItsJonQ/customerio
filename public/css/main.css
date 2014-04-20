@@ -116,7 +116,15 @@ img {
   margin-bottom: 30px; }
   .featurette.branded {
     background-color: #245a5a;
-    color: #fff; }
+    color: #fff;
+    padding: 30px; }
+    .featurette.branded h1 {
+      font-size: 2.8em; }
+    .featurette.branded .headline p {
+      color: #fff; }
+    .featurette.branded a {
+      color: #fff;
+      text-decoration: underline; }
   .featurette.bottomless {
     margin-bottom: 0; }
   .featurette.cover {
@@ -134,10 +142,14 @@ img {
     padding: 30px; }
   .featurette .headline h1, .featurette .headline h2 {
     font-size: 2.8em; }
+  .featurette .headline p {
+    color: #666;
+    font-size: 1.4em;
+    line-height: 1.5em; }
   .featurette .headline small {
     font-size: 0.65em;
     line-height: 1.5em; }
-  .featurette p {
+  .featurette .standout {
     color: #666;
     font-size: 1.4em;
     line-height: 1.5em; }
