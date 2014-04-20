@@ -70,6 +70,10 @@ html, body {
   font-smoothing: antialiased;
   text-rendering: optimizeLegibility; }
 
+img {
+  max-width: 100%;
+  height: auto; }
+
 .img-center {
   display: block;
   margin: 0 auto; }
