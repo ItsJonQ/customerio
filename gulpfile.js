@@ -1,6 +1,7 @@
 // Requiring gulp modules
 var gulp = require('gulp');
 var browserify = require('gulp-browserify');
+// var livereload = require('gulp-livereload');
 var plumber = require('gulp-plumber');
 var sass = require('gulp-sass');
 var watch = require('gulp-watch');
@@ -30,6 +31,10 @@ gulp.task('sass', function() {
 
 // Watch
 gulp.task('watch', function() {
+    // var server = livereload();
     gulp.watch('./build/css/**/*.scss', ['sass']);
     gulp.watch('./build/js/**/*.js', ['scripts']);
+    // gulp.watch('./build/**').on('change', function(file) {
+    //     server.changed(file.path);
+    // });
 });

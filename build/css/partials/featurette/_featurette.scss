@@ -6,6 +6,7 @@
 .featurette {
     background-color: transparent;
     height: 32em;
+    margin-bottom: $gutter;
 
     // .branded
     // This gives the featurette a darker background color
@@ -25,7 +26,35 @@
         @include background-size(cover);
         background-position: center center;
         height: 48em;
-     }
+    }
+
+    // flex
+    // This allows for the featurette to have a flexed height
+    &.flex {
+        height: auto;
+    }
+
+    &.light-grey {
+        background-color: #f7f7f7;
+        padding: $gutter;
+    }
+
+    .headline {
+        h1, h2 {
+            font-size: $font-size-large;
+        }
+
+        p {
+            color: #666;
+            font-size: 1.4em;
+            line-height: 1.5em;
+        }
+
+        small {
+            font-size: 0.65em;
+            line-height: 1.5em;
+        }
+    }
 
     // .v-center-wrap
     // This adjusts lil b's v-center-wrap attributes

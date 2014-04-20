@@ -11,6 +11,10 @@
  * @modules
  */
 /**
+ * Grid
+ * @modules
+ */
+/**
  * Fonts
  * @modules
  */
@@ -66,13 +70,18 @@ html, body {
   font-smoothing: antialiased;
   text-rendering: optimizeLegibility; }
 
+.img-center {
+  display: block;
+  margin: 0 auto; }
+
 /**
  * Featurette
  * @partial
  */
 .featurette {
   background-color: transparent;
-  height: 32em; }
+  height: 32em;
+  margin-bottom: 30px; }
   .featurette.branded {
     background-color: #245a5a;
     color: #fff; }
@@ -86,6 +95,20 @@ html, body {
     background-size: cover;
     background-position: center center;
     height: 48em; }
+  .featurette.flex {
+    height: auto; }
+  .featurette.light-grey {
+    background-color: #f7f7f7;
+    padding: 30px; }
+  .featurette .headline h1, .featurette .headline h2 {
+    font-size: 2.8em; }
+  .featurette .headline p {
+    color: #666;
+    font-size: 1.4em;
+    line-height: 1.5em; }
+  .featurette .headline small {
+    font-size: 0.65em;
+    line-height: 1.5em; }
   .featurette .v-center-wrap {
     height: 100%; }
     .featurette .v-center-wrap h1 {
@@ -106,3 +129,33 @@ html, body {
  * TinyMCE (Editor)
  * @partial
  */
+.tinymce-editor {
+  height: 200px;
+  margin-bottom: 30px; }
+
+.live-preview-area {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  padding: 15px;
+  width: 100%;
+  min-height: 340px;
+  font-size: 16px;
+  line-height: 1.5em; }
+  .live-preview-area a {
+    color: #29B2E6; }
+  .live-preview-area .heading {
+    background: #f5f5f5;
+    text-align: center;
+    padding: 15px;
+    margin: -15px;
+    margin-bottom: 15px; }
+    .live-preview-area .heading h3 {
+      margin: 0;
+      padding: 0; }
+  .live-preview-area .subtitle {
+    color: #888; }
