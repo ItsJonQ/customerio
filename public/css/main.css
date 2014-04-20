@@ -158,6 +158,14 @@ img {
   display: block; }
 
 /**
+ * Section (Lil' B)
+ * @partial
+ */
+.section-lil-b {
+  background-color: #604388;
+  color: #fff; }
+
+/**
  * TinyMCE (Editor)
  * @partial
  */
