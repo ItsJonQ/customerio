@@ -163,7 +163,49 @@ img {
  */
 .section-lil-b {
   background-color: #604388;
-  color: #fff; }
+  padding: 30px;
+  color: #fff;
+  font-size: 16px;
+  line-height: 1.5em; }
+  .section-lil-b .headline p {
+    font-size: 1.2em;
+    color: #fff; }
+  .section-lil-b .lil-b-logo {
+    border: 3px solid #fff;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+    border-radius: 30px;
+    width: 250px;
+    display: block;
+    overflow: hidden;
+    margin: 0 auto 30px; }
+    .section-lil-b .lil-b-logo img {
+      width: 100%;
+      height: auto; }
+  .section-lil-b .big-link-container {
+    text-align: center;
+    margin-bottom: 30px; }
+    .section-lil-b .big-link-container .big-link {
+      border: 2px solid #fff;
+      color: #fff;
+      -webkit-border-radius: 6px;
+      -moz-border-radius: 6px;
+      -ms-border-radius: 6px;
+      -o-border-radius: 6px;
+      border-radius: 6px;
+      padding: 10px 15px;
+      font-weight: bold;
+      display: inline-block;
+      margin: 0 auto;
+      text-decoration: none; }
+      .section-lil-b .big-link-container .big-link:hover {
+        background: rgba(255, 255, 255, 0.08);
+        text-decoration: none; }
+  .section-lil-b a {
+    color: #fff;
+    text-decoration: underline; }
 
 /**
  * TinyMCE (Editor)

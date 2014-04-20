@@ -3,7 +3,57 @@
  * @partial
  */
 
-.section-lil-b {
+ .section-lil-b {
     background-color: #604388;
-    color: $font-color-white;
+    padding: $gutter;
+    color: #fff;
+    font-size: 16px;
+    line-height: 1.5em;
+
+    .headline {
+        p {
+            font-size: 1.2em;
+            color: #fff;
+        }
+    }
+
+    .lil-b-logo {
+        border: 3px solid #fff;
+        @include border-radius(30px);
+        width: 250px;
+        display: block;
+        overflow: hidden;
+        margin: 0 auto $gutter;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .big-link-container {
+        text-align: center;
+        margin-bottom: $gutter;
+
+        .big-link {
+            border: 2px solid #fff;
+            color: #fff;
+            @include border-radius(6px);
+            padding: 10px 15px;
+            font-weight: bold;
+            display: inline-block;
+            margin: 0 auto;
+            text-decoration: none;
+
+            &:hover {
+                background: rgba(255, 255, 255, 0.08);
+                text-decoration: none;
+            }
+        }
+    }
+
+    a {
+        color: #fff;
+        text-decoration: underline;
+    }
 }

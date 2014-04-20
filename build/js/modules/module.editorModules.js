@@ -78,8 +78,6 @@ module.exports = (function ($, undefined) {
         render();
         renderEditor();
 
-        // Initializing Bootstrap tool tips
-        $('#create-new-editor-module').tooltip();
 
     };
 

@@ -7,14 +7,15 @@ var tinymce = require('./modules/module.tinymce');
 
 var editorModules = require('./modules/module.editorModules');
 
-
+// Kickstart tooltips
+$('[data-toggle="tooltip"]').tooltip();
 
 // Defining the Global App API
 window.App = {
     templatePreview: templatePreview,
     tinymce: tinymce
 };
-}).call(this,require("/Users/Jon/Work/customer.io/Sites/page/node_modules/gulp-browserify/node_modules/browserify/node_modules/insert-module-globals/node_modules/process/browser.js"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_ec296ff0.js","/")
+}).call(this,require("/Users/Jon/Work/customer.io/Sites/page/node_modules/gulp-browserify/node_modules/browserify/node_modules/insert-module-globals/node_modules/process/browser.js"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_3486f9e2.js","/")
 },{"./modules/module.editorModules":2,"./modules/module.templatePreview":3,"./modules/module.tinymce":4,"/Users/Jon/Work/customer.io/Sites/page/node_modules/gulp-browserify/node_modules/browserify/node_modules/insert-module-globals/node_modules/process/browser.js":8,"buffer":5}],2:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 /**
@@ -97,8 +98,6 @@ module.exports = (function ($, undefined) {
         render();
         renderEditor();
 
-        // Initializing Bootstrap tool tips
-        $('#create-new-editor-module').tooltip();
 
     };
 
