@@ -1,13 +1,25 @@
 // Requiring gulp modules
 var gulp = require('gulp');
+var browserify = require('gulp-browserify');
 var plumber = require('gulp-plumber');
 var sass = require('gulp-sass');
 var watch = require('gulp-watch');
 
 // Default Gulp Task
-gulp.task('default', ['sass', 'watch']);
+gulp.task('default', ['sass', 'scripts', 'watch']);
 
 
+// Browserify
+gulp.task('scripts', function() {
+    gulp.src('./build/js/app.js')
+        .pipe(browserify({
+            insertGLobals: true
+        }))
+        .pipe(gulp.dest('./public/js'));
+});
+
+
+// Sass
 gulp.task('sass', function() {
     gulp.src('./build/css/**/*.scss')
         .pipe(plumber())
@@ -16,6 +28,8 @@ gulp.task('sass', function() {
 });
 
 
+// Watch
 gulp.task('watch', function() {
     gulp.watch('./build/css/**/*.scss', ['sass']);
+    gulp.watch('./build/js/**/*.js', ['scripts']);
 });

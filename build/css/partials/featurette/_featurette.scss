@@ -4,5 +4,37 @@
  */
 
 .featurette {
+    background-color: transparent;
     height: 32em;
+
+    // .branded
+    // This gives the featurette a darker background color
+    &.branded {
+        background-color: $brand-color-main;
+        color: $font-color-white;
+    }
+
+    &.bottomless {
+        margin-bottom: 0;
+    }
+
+    // .cover
+    // This provides properties for the featurette to use an
+    // image as the background
+     &.cover {
+        @include background-size(cover);
+        background-position: center center;
+        height: 48em;
+     }
+
+    // .v-center-wrap
+    // This adjusts lil b's v-center-wrap attributes
+    .v-center-wrap {
+        height: 100%;
+
+        h1 {
+            margin-top: 0;
+            padding: 0;
+        }
+    }
 }
