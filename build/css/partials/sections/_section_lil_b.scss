@@ -17,6 +17,11 @@
         }
     }
 
+    p {
+        color: #fff;
+        font-size: 1em;
+    }
+
     .lil-b-logo {
         border: 3px solid #fff;
         @include border-radius(30px);

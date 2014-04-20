@@ -134,12 +134,12 @@ img {
     padding: 30px; }
   .featurette .headline h1, .featurette .headline h2 {
     font-size: 2.8em; }
-  .featurette .headline p {
-    color: #666;
-    font-size: 1.4em;
-    line-height: 1.5em; }
   .featurette .headline small {
     font-size: 0.65em;
+    line-height: 1.5em; }
+  .featurette p {
+    color: #666;
+    font-size: 1.4em;
     line-height: 1.5em; }
   .featurette .v-center-wrap {
     height: 100%; }
@@ -170,6 +170,9 @@ img {
   .section-lil-b .headline p {
     font-size: 1.2em;
     color: #fff; }
+  .section-lil-b p {
+    color: #fff;
+    font-size: 1em; }
   .section-lil-b .lil-b-logo {
     border: 3px solid #fff;
     -webkit-border-radius: 30px;
