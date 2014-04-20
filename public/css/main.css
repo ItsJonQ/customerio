@@ -82,6 +82,30 @@ img {
   margin-bottom: 80px; }
 
 /**
+ * Buttons
+ * @partials
+ */
+.button {
+  -webkit-transition: all 0.15s ease;
+  -moz-transition: all 0.15s ease;
+  -ms-transition: all 0.15s ease;
+  -o-transition: all 0.15s ease;
+  transition: all 0.15s ease;
+  cursor: pointer;
+  background-color: #ddd;
+  border: none;
+  padding: 4px 10px;
+  display: inline-block; }
+  .button:hover {
+    background-color: #245a5a;
+    color: #fff; }
+  .button:active {
+    background-color: #2d7070;
+    color: #fff; }
+  .button:focus {
+    outline: 0; }
+
+/**
  * Featurette
  * @partial
  */
@@ -166,6 +190,15 @@ img {
       padding: 0; }
   .live-preview-area .subtitle {
     color: #888; }
+
+/**
+ * Modules (Editor)
+ * @partial
+ */
+.modules-container {
+  margin-bottom: 30px; }
+  .modules-container label {
+    margin-right: 5px; }
 
 /**
  * Template Preview (Editor)

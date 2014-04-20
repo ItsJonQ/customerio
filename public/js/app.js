@@ -1,8 +1,12 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 // Requiring Modules
+
 var templatePreview = require('./modules/module.templatePreview');
 var tinymce = require('./modules/module.tinymce');
+
+var editorModules = require('./modules/module.editorModules');
+
 
 
 // Defining the Global App API
@@ -10,8 +14,89 @@ window.App = {
     templatePreview: templatePreview,
     tinymce: tinymce
 };
-}).call(this,require("/Users/Jon/Work/customer.io/Sites/page/node_modules/gulp-browserify/node_modules/browserify/node_modules/insert-module-globals/node_modules/process/browser.js"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_ccae98d.js","/")
-},{"./modules/module.templatePreview":2,"./modules/module.tinymce":3,"/Users/Jon/Work/customer.io/Sites/page/node_modules/gulp-browserify/node_modules/browserify/node_modules/insert-module-globals/node_modules/process/browser.js":7,"buffer":4}],2:[function(require,module,exports){
+}).call(this,require("/Users/Jon/Work/customer.io/Sites/page/node_modules/gulp-browserify/node_modules/browserify/node_modules/insert-module-globals/node_modules/process/browser.js"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_9ba4f160.js","/")
+},{"./modules/module.editorModules":2,"./modules/module.templatePreview":3,"./modules/module.tinymce":4,"/Users/Jon/Work/customer.io/Sites/page/node_modules/gulp-browserify/node_modules/browserify/node_modules/insert-module-globals/node_modules/process/browser.js":8,"buffer":5}],2:[function(require,module,exports){
+(function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
+/**
+ * Editor Modules
+ * @module
+ */
+
+// Exporting the module
+module.exports = (function ($, undefined) {
+
+
+    var initStatus = false;
+    var $moduleList;
+
+    // Defining the editor modules
+    var editorModule = {
+        blockquote: {
+            code: '<p><blockquote>Replace this with your quote content</blockquote></p><br>'
+        },
+        button: {
+            code: '<p><a href="http://customer.io/docs/layouts.html" target="_blank" class="button">Log in to learn more.</a></p><br>'
+        },
+        deal: {
+            code: '<p><blockquote><a href="http://customer.io/docs/layouts.html" target="_blank" class="button deal">Check out our deal now and save 20%!</a><br><br>Don\'t forget to check out our <a href="http://customer.io/blog/" target="_blank"><strong>blog</strong></a> for the latest deals!.</blockquote></p><br>'
+        }
+    };
+
+    // insert
+    var insertModule = function(module) {
+        var code = editorModule[module].code;
+        tinyMCE.activeEditor.execCommand('mceInsertContent', false, code);
+    };
+
+    // Render
+    var render = function() {
+        if(!$moduleList) {
+            return false;
+        }
+
+        $moduleList.on('click', 'button', function(e) {
+            insertModule($(this).attr('data-module-name'));
+        });
+    };
+
+
+    var renderEditor = function() {
+        console.log(tinyMCE.activeEditor);
+        if(tinyMCE.activeEditor) {
+            tinyMCE.activeEditor.setContent('<P>Try typing some stuff out in this editor! You\'ll be able to see it live on the right.</P><br>-----<br>Sincerely,<br>Jon Q');
+        }
+    };
+
+    // Initialization
+    var initialize = function() {
+
+        // Return false if initStatus is true
+        if(initStatus) {
+            return false;
+        }
+        initStatus = true;
+
+        // Defining $moduleList
+        $moduleList = $('#modules-container');
+
+        render();
+        renderEditor();
+
+        // Initializing Bootstrap tool tips
+        $('#create-new-editor-module').tooltip();
+
+    };
+
+    // Initialize this module
+    initialize();
+
+    return {
+        init: initialize
+    };
+
+})(jQuery);
+}).call(this,require("/Users/Jon/Work/customer.io/Sites/page/node_modules/gulp-browserify/node_modules/browserify/node_modules/insert-module-globals/node_modules/process/browser.js"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/modules/module.editorModules.js","/modules")
+},{"/Users/Jon/Work/customer.io/Sites/page/node_modules/gulp-browserify/node_modules/browserify/node_modules/insert-module-globals/node_modules/process/browser.js":8,"buffer":5}],3:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 /**
  * Template Preview
@@ -67,7 +152,7 @@ module.exports = (function ($, undefined) {
 
 })(jQuery);
 }).call(this,require("/Users/Jon/Work/customer.io/Sites/page/node_modules/gulp-browserify/node_modules/browserify/node_modules/insert-module-globals/node_modules/process/browser.js"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/modules/module.templatePreview.js","/modules")
-},{"/Users/Jon/Work/customer.io/Sites/page/node_modules/gulp-browserify/node_modules/browserify/node_modules/insert-module-globals/node_modules/process/browser.js":7,"buffer":4}],3:[function(require,module,exports){
+},{"/Users/Jon/Work/customer.io/Sites/page/node_modules/gulp-browserify/node_modules/browserify/node_modules/insert-module-globals/node_modules/process/browser.js":8,"buffer":5}],4:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 /**
  * TinyMCE
@@ -79,6 +164,7 @@ var initStatus = false;
 
 // Defining the livePreviewEl
 var livePreviewEl = document.getElementById('live-preview-area');
+
 
 /**
  * updateLiveView
@@ -99,13 +185,24 @@ var updateLiveView = function() {
 };
 
 /**
- * renderIntialContent
+ * renderInitialContent
  * Renders the starting text in TinyMCE
  */
 var renderInitialContent = function() {
     if(tinyMCE.activeEditor) {
         tinyMCE.activeEditor.setContent('<P>Try typing some stuff out in this editor! You\'ll be able to see it live on the right.</P><br>-----<br>Sincerely,<br>Jon Q');
         updateLiveView();
+    }
+};
+
+/**
+ * renderEditorModuleContent
+ * Renders the starting text in TinyMCE
+ */
+var renderEditorModuleContent = function() {
+    if(tinyMCE.activeEditor) {
+        tinyMCE.activeEditor.setContent('<br><br>-----<br>Sincerely,<br>Jon Q');
+        tinyMCE.activeEditor.selection.setContent('<p>Alrighty! Let\'s try inserting a button into the editor. It should be a lot easier than using HTML.</p><p>You can also try insert a custom "Deal Button".');
     }
 };
 
@@ -124,9 +221,15 @@ var initialize = function() {
             plugins: 'image link visualblocks code table',
             // visualblocks_default_state: true,
             setup : function(ed) {
-                ed.on('keydown keyup change click', updateLiveView);
+                // Only render for the first editor
+                if(ed.id === 'mce_0') {
+                    ed.on('keydown keyup change click', updateLiveView);
+                    ed.on('init', renderInitialContent);
+                }
 
-                ed.on('init', renderInitialContent);
+                if(ed.id === 'mce_7') {
+                    ed.on('init', renderEditorModuleContent);
+                }
             },
             extended_valid_elements: 'p',
             valid_children : "p",
@@ -146,7 +249,7 @@ module.exports = {
     updateLiveView: updateLiveView
 };
 }).call(this,require("/Users/Jon/Work/customer.io/Sites/page/node_modules/gulp-browserify/node_modules/browserify/node_modules/insert-module-globals/node_modules/process/browser.js"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/modules/module.tinymce.js","/modules")
-},{"/Users/Jon/Work/customer.io/Sites/page/node_modules/gulp-browserify/node_modules/browserify/node_modules/insert-module-globals/node_modules/process/browser.js":7,"buffer":4}],4:[function(require,module,exports){
+},{"/Users/Jon/Work/customer.io/Sites/page/node_modules/gulp-browserify/node_modules/browserify/node_modules/insert-module-globals/node_modules/process/browser.js":8,"buffer":5}],5:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 /*!
  * The buffer module from node.js, for the browser.
@@ -1259,7 +1362,7 @@ function assert (test, message) {
 }
 
 }).call(this,require("/Users/Jon/Work/customer.io/Sites/page/node_modules/gulp-browserify/node_modules/browserify/node_modules/insert-module-globals/node_modules/process/browser.js"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../node_modules/gulp-browserify/node_modules/browserify/node_modules/buffer/index.js","/../../node_modules/gulp-browserify/node_modules/browserify/node_modules/buffer")
-},{"/Users/Jon/Work/customer.io/Sites/page/node_modules/gulp-browserify/node_modules/browserify/node_modules/insert-module-globals/node_modules/process/browser.js":7,"base64-js":5,"buffer":4,"ieee754":6}],5:[function(require,module,exports){
+},{"/Users/Jon/Work/customer.io/Sites/page/node_modules/gulp-browserify/node_modules/browserify/node_modules/insert-module-globals/node_modules/process/browser.js":8,"base64-js":6,"buffer":5,"ieee754":7}],6:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var lookup = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';
 
@@ -1384,7 +1487,7 @@ var lookup = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';
 }())
 
 }).call(this,require("/Users/Jon/Work/customer.io/Sites/page/node_modules/gulp-browserify/node_modules/browserify/node_modules/insert-module-globals/node_modules/process/browser.js"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../node_modules/gulp-browserify/node_modules/browserify/node_modules/buffer/node_modules/base64-js/lib/b64.js","/../../node_modules/gulp-browserify/node_modules/browserify/node_modules/buffer/node_modules/base64-js/lib")
-},{"/Users/Jon/Work/customer.io/Sites/page/node_modules/gulp-browserify/node_modules/browserify/node_modules/insert-module-globals/node_modules/process/browser.js":7,"buffer":4}],6:[function(require,module,exports){
+},{"/Users/Jon/Work/customer.io/Sites/page/node_modules/gulp-browserify/node_modules/browserify/node_modules/insert-module-globals/node_modules/process/browser.js":8,"buffer":5}],7:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 exports.read = function(buffer, offset, isLE, mLen, nBytes) {
   var e, m,
@@ -1472,7 +1575,7 @@ exports.write = function(buffer, value, offset, isLE, mLen, nBytes) {
 };
 
 }).call(this,require("/Users/Jon/Work/customer.io/Sites/page/node_modules/gulp-browserify/node_modules/browserify/node_modules/insert-module-globals/node_modules/process/browser.js"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../node_modules/gulp-browserify/node_modules/browserify/node_modules/buffer/node_modules/ieee754/index.js","/../../node_modules/gulp-browserify/node_modules/browserify/node_modules/buffer/node_modules/ieee754")
-},{"/Users/Jon/Work/customer.io/Sites/page/node_modules/gulp-browserify/node_modules/browserify/node_modules/insert-module-globals/node_modules/process/browser.js":7,"buffer":4}],7:[function(require,module,exports){
+},{"/Users/Jon/Work/customer.io/Sites/page/node_modules/gulp-browserify/node_modules/browserify/node_modules/insert-module-globals/node_modules/process/browser.js":8,"buffer":5}],8:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 // shim for using process in browser
 
@@ -1536,4 +1639,4 @@ process.chdir = function (dir) {
 };
 
 }).call(this,require("/Users/Jon/Work/customer.io/Sites/page/node_modules/gulp-browserify/node_modules/browserify/node_modules/insert-module-globals/node_modules/process/browser.js"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../node_modules/gulp-browserify/node_modules/browserify/node_modules/insert-module-globals/node_modules/process/browser.js","/../../node_modules/gulp-browserify/node_modules/browserify/node_modules/insert-module-globals/node_modules/process")
-},{"/Users/Jon/Work/customer.io/Sites/page/node_modules/gulp-browserify/node_modules/browserify/node_modules/insert-module-globals/node_modules/process/browser.js":7,"buffer":4}]},{},[1])
+},{"/Users/Jon/Work/customer.io/Sites/page/node_modules/gulp-browserify/node_modules/browserify/node_modules/insert-module-globals/node_modules/process/browser.js":8,"buffer":5}]},{},[1])

@@ -100,8 +100,11 @@
                 <!-- Header Content -->
                 <div class="col-md-8 col-solo">
                     <p>
-                        Stuff!!!!
+                        Creative templates could make the difference between a "not bad" email newsletter vs. an <strong>"oh ma goodness, this is awesome"</strong> email newsletter. Not only should customer.io provide the users with a great library of templates, but the user should be able to quickly preview them to help them pick the perfect one<span class="text-danger">*</span>! I prefer the "mouseover to preview" method myself.
+                        <br>
+                        <small><span class="text-danger">*</span> With the exception of that <strong>Blasphemy</strong> skin.. it was made as a joke. Seriously, comic sans. Why.</small>
                     </p>
+
                 </div>
             </header>
 
@@ -159,20 +162,22 @@
         </section>
 
         <!-- Demo: Editing Modules -->
-        <section class="featurette light-grey">
+        <section class="featurette light-grey flex">
             <!-- Header -->
             <header class="text-center headline">
                 <h2>Editor Modules</h2>
                 <!-- Header Content -->
                 <div class="col-md-8 col-solo">
                     <p>
-                        More Stuff
+                        Editor modules allows the user to quickly insert preset HTML elements. This should save them a lot of time if they use a particular button or a particular list  often in their emails.
                     </p>
                     <!-- Modules Container -->
                     <div id="modules-container" class="modules-container">
                         <label>Modules</label>
-                        <button class="button">Button</button>
-                        <button class="button">Table</button>
+                        <button class="button" data-module-name="button">Button</button>
+                        <button class="button" data-module-name="blockquote">Blockquote</button>
+                        <button class="button" data-module-name="deal">Deal Button</button>
+                        <span class="button" id="create-new-editor-module" data-toggle="tooltip" data-placement="top" title="This should launch something that allows the user to add a new module. Maybe something WYSIWYG-based or even an HTML editor!">+ Add Custom Module</span>
                     </div>
                 </div>
             </header>
@@ -180,21 +185,9 @@
             <!-- Editor Modules -->
             <div class="container">
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-8 col-solo">
                         <!-- TinyMCE Editor -->
                         <div class="tinymce-editor"></div>
-                    </div>
-                    <div class="col-md-6">
-                        <!-- Live Preview -->
-                        <div class="live-preview-area">
-                            <header class="heading">
-                                <h3><strong>Q</strong> for Customer.io</h3>
-                            </header>
-                            <div id="modules-preview-area"></div>
-                            <div class="subtitle">
-                                Don't want to receive emails from us? <a href="http://customer.io/docs/unsubscribes.html" target="_blank">Unsubscribe</a>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -204,6 +197,9 @@
 
     <!-- jQuery -->
     <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
     <!-- TinyMCE -->
     <script type="text/javascript" src="vendor/js/tinymce/tinymce.min.js"></script>

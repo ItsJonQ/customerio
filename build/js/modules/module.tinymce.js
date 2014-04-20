@@ -9,6 +9,7 @@ var initStatus = false;
 // Defining the livePreviewEl
 var livePreviewEl = document.getElementById('live-preview-area');
 
+
 /**
  * updateLiveView
  * Renders the tinyMCE text into the livePreview area
@@ -28,13 +29,24 @@ var updateLiveView = function() {
 };
 
 /**
- * renderIntialContent
+ * renderInitialContent
  * Renders the starting text in TinyMCE
  */
 var renderInitialContent = function() {
     if(tinyMCE.activeEditor) {
         tinyMCE.activeEditor.setContent('<P>Try typing some stuff out in this editor! You\'ll be able to see it live on the right.</P><br>-----<br>Sincerely,<br>Jon Q');
         updateLiveView();
+    }
+};
+
+/**
+ * renderEditorModuleContent
+ * Renders the starting text in TinyMCE
+ */
+var renderEditorModuleContent = function() {
+    if(tinyMCE.activeEditor) {
+        tinyMCE.activeEditor.setContent('<br><br>-----<br>Sincerely,<br>Jon Q');
+        tinyMCE.activeEditor.selection.setContent('<p>Alrighty! Let\'s try inserting a button into the editor. It should be a lot easier than using HTML.</p><p>You can also try insert a custom "Deal Button".');
     }
 };
 
@@ -53,9 +65,15 @@ var initialize = function() {
             plugins: 'image link visualblocks code table',
             // visualblocks_default_state: true,
             setup : function(ed) {
-                ed.on('keydown keyup change click', updateLiveView);
+                // Only render for the first editor
+                if(ed.id === 'mce_0') {
+                    ed.on('keydown keyup change click', updateLiveView);
+                    ed.on('init', renderInitialContent);
+                }
 
-                ed.on('init', renderInitialContent);
+                if(ed.id === 'mce_7') {
+                    ed.on('init', renderEditorModuleContent);
+                }
             },
             extended_valid_elements: 'p',
             valid_children : "p",

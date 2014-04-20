@@ -4,6 +4,9 @@
 // Partials
 @import 'partials/base';
 
+// Buttons
+@import 'partials/buttons';
+
 // Featurette
 @import 'partials/featurette/featurette';
 
@@ -12,4 +15,5 @@
 
 // Editors
 @import 'partials/editor/editor_tinymce';
+@import 'partials/editor/editor_modules';
 @import 'partials/editor/editor_template_preview';
