@@ -1,0 +1,50 @@
+/**
+ * Template Preview
+ * @partial
+ */
+
+#template-preview-area {
+
+    &.fancy {
+        .live-preview-area {
+
+        }
+    }
+
+    &.classy {
+        .live-preview-area {
+            font-family: 'Georgia';
+
+            .heading {
+                background: none;
+                margin: 0 0 $gutter-half;
+                border-bottom: 1px solid #ddd;
+            }
+        }
+    }
+
+}
+
+// Template List
+.email-template-list {
+    @include disable-selection;
+
+    li {
+        cursor: pointer;
+        border-bottom: 1px solid #eee;
+        display: block;
+        padding: 5px 10px;
+
+        &:hover {
+            background: #F5FAFC;
+        }
+
+        &.header {
+            font-weight: bold;
+
+            &:hover {
+                background: none;
+            }
+        }
+    }
+}

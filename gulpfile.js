@@ -14,7 +14,7 @@ gulp.task('default', ['sass', 'scripts', 'watch']);
 gulp.task('scripts', function() {
     gulp.src('./build/js/app.js')
         .pipe(browserify({
-            insertGLobals: true
+            insertGlobals: true
         }))
         .pipe(gulp.dest('./public/js'));
 });

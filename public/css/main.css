@@ -84,7 +84,7 @@ img {
  */
 .featurette {
   background-color: transparent;
-  height: 32em;
+  height: 36em;
   margin-bottom: 30px; }
   .featurette.branded {
     background-color: #245a5a;
@@ -163,3 +163,33 @@ img {
       padding: 0; }
   .live-preview-area .subtitle {
     color: #888; }
+
+/**
+ * Template Preview
+ * @partial
+ */
+#template-preview-area.classy .live-preview-area {
+  font-family: 'Georgia'; }
+  #template-preview-area.classy .live-preview-area .heading {
+    background: none;
+    margin: 0 0 15px;
+    border-bottom: 1px solid #ddd; }
+
+.email-template-list {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+  .email-template-list li {
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+    display: block;
+    padding: 5px 10px; }
+    .email-template-list li:hover {
+      background: #F5FAFC; }
+    .email-template-list li.header {
+      font-weight: bold; }
+      .email-template-list li.header:hover {
+        background: none; }
