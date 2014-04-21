@@ -17,7 +17,7 @@ module.exports = (function ($, undefined) {
             return false;
         }
 
-        $templateList.on('click mouseenter', 'li', function(e) {
+        $templateList.on('click', 'li', function(e) {
             // Remove all classes from $el
             $el[0].className = '';
             $el.addClass($(this).attr('data-template-class'));

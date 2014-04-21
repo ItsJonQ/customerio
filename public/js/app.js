@@ -17,7 +17,7 @@ window.App = {
     templatePreview: templatePreview,
     tinymce: tinymce
 };
-}).call(this,require("/Users/Jon/Work/customer.io/Sites/page/node_modules/gulp-browserify/node_modules/browserify/node_modules/insert-module-globals/node_modules/process/browser.js"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_f61830b3.js","/")
+}).call(this,require("/Users/Jon/Work/customer.io/Sites/page/node_modules/gulp-browserify/node_modules/browserify/node_modules/insert-module-globals/node_modules/process/browser.js"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_68c49425.js","/")
 },{"./modules/module.editorModules":2,"./modules/module.navigation":3,"./modules/module.templatePreview":4,"./modules/module.tinymce":5,"/Users/Jon/Work/customer.io/Sites/page/node_modules/gulp-browserify/node_modules/browserify/node_modules/insert-module-globals/node_modules/process/browser.js":9,"buffer":6}],2:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 /**
@@ -170,7 +170,7 @@ module.exports = (function ($, undefined) {
             return false;
         }
 
-        $templateList.on('click mouseenter', 'li', function(e) {
+        $templateList.on('click', 'li', function(e) {
             // Remove all classes from $el
             $el[0].className = '';
             $el.addClass($(this).attr('data-template-class'));
