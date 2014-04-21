@@ -36,27 +36,6 @@
         }
     }
 
-    .big-link-container {
-        text-align: center;
-        margin-bottom: $gutter;
-
-        .big-link {
-            border: 2px solid #fff;
-            color: #fff;
-            @include border-radius(6px);
-            padding: 10px 15px;
-            font-weight: bold;
-            display: inline-block;
-            margin: 0 auto;
-            text-decoration: none;
-
-            &:hover {
-                background: rgba(255, 255, 255, 0.08);
-                text-decoration: none;
-            }
-        }
-    }
-
     a {
         color: #fff;
         text-decoration: underline;
