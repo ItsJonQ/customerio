@@ -5,9 +5,14 @@
 
 .section-hello {
     .logo {
+        @include transition(all 0.2s ease);
         width: 200px;
         height: auto;
         margin: 0 auto;
         display: block;
+
+        &:hover {
+            @include transform(rotate(-10deg));
+        }
     }
 }

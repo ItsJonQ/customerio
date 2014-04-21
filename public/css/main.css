@@ -183,10 +183,21 @@ img {
  * @partial
  */
 .section-hello .logo {
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
   width: 200px;
   height: auto;
   margin: 0 auto;
   display: block; }
+  .section-hello .logo:hover {
+    -webkit-transform: rotate(-10deg);
+    -moz-transform: rotate(-10deg);
+    -ms-transform: rotate(-10deg);
+    -o-transform: rotate(-10deg);
+    transform: rotate(-10deg); }
 
 /**
  * Section (Lil' B)
