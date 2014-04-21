@@ -31,6 +31,8 @@
         }
     }
 
+    // .bottomless
+    // This removes the margin for the bottom of the featurette
     &.bottomless {
         margin-bottom: 0;
     }
@@ -44,7 +46,7 @@
         height: 48em;
     }
 
-    // flex
+    // .flex
     // This allows for the featurette to have a flexed height
     &.flex {
         height: auto;
@@ -55,6 +57,8 @@
         padding: $gutter;
     }
 
+    // .headline
+    // This is the opening header/headline of the featurette
     .headline {
         h1, h2 {
             font-size: $font-size-large;
@@ -72,13 +76,16 @@
         }
     }
 
+    // .standout
+    // This is a helper class that slightly enlarges the text size of a selector
     .standout {
         color: #666;
         font-size: 1.4em;
         line-height: 1.5em;
     }
 
-
+    // .big-link-container
+    // This contains a big link
     .big-link-container {
         text-align: center;
         margin-bottom: $gutter;
