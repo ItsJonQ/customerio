@@ -5,9 +5,8 @@
 
 .site-navigation {
     @include position(fixed, 0, 0, false, 0, 9999999);
-    @include translateZ;
     @include transition(all 0.2s ease);
-    @include transform(translate(0, -50px));
+    @include transform(translate3d(0, -50px, 0));
     height: 50px;
     background-color: #2f393a;
     text-align: center;
@@ -20,6 +19,6 @@
     }
 
     &.reveal {
-        @include transform(translate(0, 0));
+        @include transform(translate3d(0, 0, 0));
     }
 }

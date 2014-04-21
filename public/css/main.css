@@ -243,21 +243,16 @@ img {
   right: 0;
   left: 0;
   z-index: 9999999;
-  -webkit-transform: translateZ(0);
-  -moz-transform: translateZ(0);
-  -ms-transform: translateZ(0);
-  -o-transform: translateZ(0);
-  transform: translateZ(0);
   -webkit-transition: all 0.2s ease;
   -moz-transition: all 0.2s ease;
   -ms-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
-  -webkit-transform: translate(0, -50px);
-  -moz-transform: translate(0, -50px);
-  -ms-transform: translate(0, -50px);
-  -o-transform: translate(0, -50px);
-  transform: translate(0, -50px);
+  -webkit-transform: translate3d(0, -50px, 0);
+  -moz-transform: translate3d(0, -50px, 0);
+  -ms-transform: translate3d(0, -50px, 0);
+  -o-transform: translate3d(0, -50px, 0);
+  transform: translate3d(0, -50px, 0);
   height: 50px;
   background-color: #2f393a;
   text-align: center; }
@@ -267,11 +262,11 @@ img {
     display: inline-block;
     margin: 12px auto; }
   .site-navigation.reveal {
-    -webkit-transform: translate(0, 0);
-    -moz-transform: translate(0, 0);
-    -ms-transform: translate(0, 0);
-    -o-transform: translate(0, 0);
-    transform: translate(0, 0); }
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); }
 
 /**
  * TinyMCE (Editor)
