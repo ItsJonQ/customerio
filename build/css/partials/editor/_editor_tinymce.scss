@@ -1,0 +1,42 @@
+/**
+ * TinyMCE (Editor)
+ * @partial
+ */
+
+.tinymce-editor {
+    height: 200px;
+    margin-bottom: $gutter;
+}
+
+// Live Preview
+.live-preview-area {
+    @include border-radius(3px);
+    border: 1px solid #ddd;
+    background-color: #fff;
+    padding: $gutter-half;
+    width: 100%;
+    min-height: 340px;
+    font-size: 16px;
+    line-height: 1.5em;
+
+    a {
+        color: #29B2E6;
+    }
+
+    .heading {
+        background: #f5f5f5;
+        text-align: center;
+        padding: $gutter-half;
+        margin: -$gutter-half;
+        margin-bottom: $gutter-half;
+
+        h3 {
+            margin: 0;
+            padding: 0;
+        }
+    }
+
+    .subtitle {
+        color: #888;
+    }
+}

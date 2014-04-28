@@ -1,0 +1,24 @@
+/**
+ * Site Navigation
+ * @partial
+ */
+
+.site-navigation {
+    @include position(fixed, 0, 0, false, 0, 9999999);
+    @include transition(all 0.2s ease);
+    @include transform(translate3d(0, -50px, 0));
+    height: 50px;
+    background-color: #2f393a;
+    text-align: center;
+
+    .logo {
+        height: 24px;
+        width: auto;
+        display: inline-block;
+        margin: 12px auto;
+    }
+
+    &.reveal {
+        @include transform(translate3d(0, 0, 0));
+    }
+}

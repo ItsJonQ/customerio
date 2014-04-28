@@ -1,0 +1,125 @@
+/**
+ * Template Preview (Editor)
+ * @partial
+ */
+
+#template-preview-area {
+    margin-bottom: $gutter;
+
+    &.fancy {
+        .live-preview-area {
+            font-size: 18px;
+            line-height: 1.4em;
+            font-family: 'Arial';
+
+            .heading {
+                border-bottom: 5px solid #DF8600;
+                font-family: 'Lobster';
+                background-color: #ff9900;
+                color: #fff;
+                text-shadow: 0px 2px 0px rgba(0, 0, 0, 0.2);
+            }
+
+        }
+    }
+
+    &.classy {
+        .live-preview-area {
+            // background: url('../../images/texture-paper.jpg');
+            font-family: 'Georgia';
+
+            .heading {
+                background: none;
+                margin: 0 0 $gutter-half;
+                border-bottom: 1px solid #ddd;
+            }
+        }
+    }
+
+    &.robots {
+        background: url('../../images/texture-robots.jpg');
+        padding: $gutter;
+
+        .live-preview-area {
+            background: #fff;
+            background-color: rgba(255,255,255, 0.85);
+            border: 1px solid #fff;
+
+            .heading {
+                background: none;
+                margin: 0 0 $gutter-half;
+                border-bottom: 1px solid #ddd;
+            }
+        }
+    }
+
+    &.bold {
+
+        .live-preview-area {
+            background: #fafafa;
+            font-size: 18px;
+            line-height: 1.5em;
+            padding: 20px $gutter-double;
+
+            .heading {
+                background: none;
+                color: #000;
+                font-size: 2.4em;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    &.blasphemy {
+        .live-preview-area {
+            background: blue;
+            color: #fff;
+            font-family: 'comic sans ms';
+
+            .heading {
+                background: none;
+                color: green;
+                background-color: yellow;
+
+                strong {
+                    color: red;
+                }
+            }
+        }
+
+        a {
+            color: orange;
+        }
+    }
+
+}
+
+// Template List
+.email-template-list {
+    @include disable-selection;
+    @include list-unstyled;
+
+    li {
+        cursor: pointer;
+        border-bottom: 1px solid #eee;
+        display: block;
+        padding: 5px 10px;
+
+        &:hover {
+            background: #F5FAFC;
+        }
+
+        &.header {
+            font-weight: bold;
+
+            h4 {
+                margin: 0;
+                font-weight: bold;
+            }
+
+            &:hover {
+                background: none;
+            }
+        }
+    }
+}

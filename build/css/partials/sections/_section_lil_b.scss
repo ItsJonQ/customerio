@@ -1,0 +1,43 @@
+/**
+ * Section (Lil' B)
+ * @partial
+ */
+
+ .section-lil-b {
+    background-color: #604388;
+    padding: $gutter;
+    color: #fff;
+    font-size: 16px;
+    line-height: 1.5em;
+
+    .headline {
+        p {
+            font-size: 1.2em;
+            color: #fff;
+        }
+    }
+
+    p {
+        color: #fff;
+        font-size: 1em;
+    }
+
+    .lil-b-logo {
+        border: 3px solid #fff;
+        @include border-radius(30px);
+        width: 250px;
+        display: block;
+        overflow: hidden;
+        margin: 0 auto $gutter;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    a {
+        color: #fff;
+        text-decoration: underline;
+    }
+}

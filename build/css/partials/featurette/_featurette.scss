@@ -1,0 +1,130 @@
+/**
+ * Featurette
+ * @partial
+ */
+
+.featurette {
+    background-color: transparent;
+    height: 36em;
+    margin-bottom: $gutter;
+
+    // .branded
+    // This gives the featurette a darker background color
+    &.branded {
+        background-color: $brand-color-main;
+        color: $font-color-white;
+        padding: $gutter;
+
+        h1 {
+            font-size: $font-size-large;
+        }
+
+        .headline {
+            p {
+                color: $font-color-white;
+            }
+        }
+
+        a {
+            color: $font-color-white;
+            text-decoration: underline;
+        }
+    }
+
+    // .bottomless
+    // This removes the margin for the bottom of the featurette
+    &.bottomless {
+        margin-bottom: 0;
+    }
+
+    // .cover
+    // This provides properties for the featurette to use an
+    // image as the background
+     &.cover {
+        @include background-size(cover);
+        background-position: center center;
+        height: 48em;
+    }
+
+    // .flex
+    // This allows for the featurette to have a flexed height
+    &.flex {
+        height: auto;
+    }
+
+    &.light-grey {
+        background-color: #f7f7f7;
+        padding: $gutter;
+    }
+
+    // .headline
+    // This is the opening header/headline of the featurette
+    .headline {
+        h1, h2 {
+            font-size: $font-size-large;
+        }
+
+        p {
+            color: #666;
+            font-size: 1.4em;
+            line-height: 1.5em;
+        }
+
+        small {
+            font-size: 0.65em;
+            line-height: 1.5em;
+        }
+    }
+
+    // .standout
+    // This is a helper class that slightly enlarges the text size of a selector
+    .standout {
+        color: #666;
+        font-size: 1.4em;
+        line-height: 1.5em;
+    }
+
+    // .big-link-container
+    // This contains a big link
+    .big-link-container {
+        text-align: center;
+        margin-bottom: $gutter;
+
+        &.group {
+            .big-link {
+                margin-right: 5px;
+
+                &.last-of-type {
+                    margin-right: 0;
+                }
+            }
+        }
+
+        .big-link {
+            border: 2px solid #fff;
+            color: #fff;
+            @include border-radius(6px);
+            padding: 10px 15px;
+            font-weight: bold;
+            display: inline-block;
+            margin: 0 auto;
+            text-decoration: none;
+
+            &:hover {
+                background: rgba(255, 255, 255, 0.08);
+                text-decoration: none;
+            }
+        }
+    }
+
+    // .v-center-wrap
+    // This adjusts lil b's v-center-wrap attributes
+    .v-center-wrap {
+        height: 100%;
+
+        h1 {
+            margin-top: 0;
+            padding: 0;
+        }
+    }
+}

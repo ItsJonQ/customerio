@@ -1,0 +1,27 @@
+/**
+ * Buttons
+ * @partials
+ */
+
+.button {
+    @include transition(all 0.15s ease);
+    cursor: pointer;
+    background-color: #ddd;
+    border: none;
+    padding: 4px 10px;
+    display: inline-block;
+
+    &:hover {
+        background-color: $brand-color-main;
+        color: #fff;
+    }
+
+    &:active {
+        background-color: lighten($brand-color-main, 6);
+        color: #fff;
+    }
+
+    &:focus {
+        outline: 0;
+    }
+}

@@ -1,0 +1,42 @@
+/**
+ * Base
+ * @partials
+ */
+
+html, body {
+    font-family: $font-family-sans-serif;
+    @include font-smoothing;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.img-center {
+    display: block;
+    margin: 0 auto;
+}
+
+.page-container {
+    // margin-bottom: 80px;
+}
+
+.section {
+    margin-bottom: $gutter;
+}
+
+.flex-video {
+    padding-top: 56.25%;
+    width: 100%;
+    height: 0;
+    position: relative;
+    margin-bottom: $gutter;
+    overflow: hidden;
+
+    iframe {
+        width: 100%;
+        height: 100%;
+        @include position(absolute, 0, 0, 0, 0, 1);
+    }
+}
