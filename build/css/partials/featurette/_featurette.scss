@@ -90,6 +90,16 @@
         text-align: center;
         margin-bottom: $gutter;
 
+        &.group {
+            .big-link {
+                margin-right: 5px;
+
+                &.last-of-type {
+                    margin-right: 0;
+                }
+            }
+        }
+
         .big-link {
             border: 2px solid #fff;
             color: #fff;

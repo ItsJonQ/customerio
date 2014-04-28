@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap -->
-    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="vendor/css/bootstrap.min.css">
     <!-- Lil B - Bootstrap Reset -->
     <link rel="stylesheet" type="text/css" href="bower_components/lil-b/b.css">
 
@@ -51,7 +51,12 @@
                         Heya customer.io,<br>
                         My name is <strong>Jon Quach</strong> - a Front-End developer, UI/UX fanatic, and part-time volunteer ninja-robot. I recently discovered your awesome company + service, and I'd love to join your team as a <strong><a href="http://customer.io/about/#jobs" target="_blank">UI/UX designer</a></strong>! I've prepared a little intro video:
                     </p>
-                    [video here]
+
+                    <!-- YouTube Intro Video -->
+                    <div class="flex-video">
+                        <iframe width="960" height="540" src="//www.youtube.com/embed/zh1WOQ1qOtA" frameborder="0" allowfullscreen></iframe>
+                    </div>
+
                     <p>
                         I come from a design-based background, specializing in Photoshop, HTML, and CSS. Throughout recent years, I've become fascinated (and semi-obsesed) with development, especially with Javascript stuff - Node, jQuery, <strong>Native Javascript<span class="text-danger">*</span></strong>, Backbone, MVC design patterns, I can't get enough of it!
                     </p>
@@ -258,7 +263,7 @@
             </div>
             <!-- View on Github -->
             <div class="big-link-container">
-                <a href="https://itsjonq.github.com/lil-b" target="_blank" class="big-link">Check it out on Github</a>
+                <a href="https://itsjonq.github.com/lil-b" target="_blank" class="big-link">Check it out</a>
             </div>
             <!-- Without Lil' B -->
             <div class="col-md-8 col-solo text-center">
@@ -291,9 +296,15 @@
                         I feel like I would make a great fit with an already talented team. Because of my knowledge and experience with not only design but also code, I can more effectively work with your developers to get things done quickly and efficiently.
                     </p>
                     <!-- Contact Link -->
-                    <div class="big-link-container">
-                        <a href="mailto:jonathanquach@gmail.com" target="_blank" class="big-link">Send me an email</a>
+                    <div class="big-link-container group">
+                        <a href="mailto:jonathanquach@gmail.com" target="_top" class="big-link">Send me an email</a><a href="http://www.jonquach.com/contact/" target="_blank" class="big-link">Fill Out a Contact Form</a>
                     </div>
+                    <p class="text-center">
+                        <small>Thanks for checking out this page!</small>
+                    </p>
+                    <p class="text-center">
+                        <small>Built by <strong><a href="http://www.jonquach.com/" rel="home">Q</a></strong> . 2014.</small>
+                    </p>
                 </div>
             </header>
         </section>
@@ -301,16 +312,16 @@
     </div>
 
     <!-- jQuery -->
-    <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="vendor/js/jquery.min.js"></script>
 
     <!-- Bootstrap -->
-    <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="vendor/js/bootstrap.min.js"></script>
 
     <!-- TinyMCE -->
     <script type="text/javascript" src="vendor/js/tinymce/tinymce.min.js"></script>
 
     <!-- Main JS -->
     <script type="text/javascript" src="public/js/app.js"></script>
-    <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+
 </body>
 </html>
